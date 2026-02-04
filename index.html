@@ -53,13 +53,14 @@
         body { @apply font-barlow text-base text-dark-blue}
         nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] flex items-center gap-[32px]}
         a { @apply hover:text-dark-cyan}
-        button { @apply bg-cyan hover:bg-cyan disabled:bg-disabled 
+        button { @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled 
         text-white font-fraunces font-black text-lg
         py-[15px] px-[31px] rounded-md }
         .flex-between {@apply flex justify-between items-center}
         img {@apply align-middle}
 
         .card {@apply bg-dark-cyan rounded-[8px] pt-[72px] px-[48px] pb-[48px] flex items-center flex-col space-y-[56px]}  
+        .number { @apply font-fraunces font-black text-7xl text-pale-orange}
                  
     </style>
 </head>
@@ -170,6 +171,39 @@
                     </div>
                  </div>
             </div>
+        </section>
+
+        <section class="mt-[296px] max-w-[1045px] mx-auto">
+            <h4 class="mb-[32px] text-grey">How it works</h4>
+
+            <div class="grid grid-cols-3 gap-[95px] space-y-[38px] mb-[90px]">
+                <div class="space-y-[38px]">
+                    <div class="number">01</div>
+                    <div class="space-y-[42px]">
+                        <h3 class="max-w-[255px]">Pick your coffee</h3>
+                        <p class="body">Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-[38px]">
+                    <div class="number">02</div>
+                    <div class="space-y-[42px]">
+                        <h3 class="max-w-[255px]">Choose the frequency</h3>
+                        <p class="body">Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-[38px]">
+                    <div class="number">03</div>
+                    <div class="space-y-[42px]">
+                        <h3 class="max-w-[255px]">Receive and enjoy!</h3>
+                        <p class="body">Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.</p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <button>Create your plan</button>
         </section>
 
 
