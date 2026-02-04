@@ -16,16 +16,20 @@
         @theme{
             /* colors  */
             --color-dark-cyan: #0E8784;
+            --color-cyan: #66D2CF;
             --color-dark-blue: #333D4B;
             --color-pale-orange: #FDD6BA;
             --color-light-cream: #FEFCF7;
             --color-grey: #83888F;
+            --color-disabled: #E2DEDB;
             /* fonts */
             --font-barlow: "Barlow", sans-serif;
             --font-fraunces: "Fraunces", serif;
             /* text-size  */
             --text-10xl: 150px;
             --text-10xl-line-height: 72px;
+            --text-8xl: 96px;
+            --text-8xl-line-height: 72px;
             --text-7xl: 72px;
             --text-7xl-line-height: 72px;
             --text-4xl: 40px;
@@ -44,23 +48,30 @@
         h2 { @apply font-fraunces font-black text-4xl  }
         h3 { @apply font-fraunces font-black text-3xl  }
         h4 { @apply font-fraunces font-black text-2xl  }
+        .title { @apply font-fraunces font-black text-6xl text-center text-grey}
         body { @apply font-barlow text-base text-dark-blue}
         nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] flex items-center gap-[32px]}
+        a { @apply hover:text-dark-cyan}
+        button { @apply bg-cyan hover:bg-cyan disabled:bg-disabled 
+        text-white font-fraunces font-black text-lg
+        py-[15px] px-[31px] rounded-md }
+        .flex-between {@apply flex justify-between items-center}
+        img {@apply align-middle}
+
+        .card {@apply bg-dark-cyan rounded-[8px] pt-[72px] px-[48px] pb-[48px] flex items-center flex-col space-y-[56px]}  
+                 
     </style>
 </head>
 
-<body>
-    <div class="flex flex-col items-center justify-center h-screen bg-dark-cyan">
-        <h1 class="title text-dark-blue">Hello World</h1>
-        <h1 class="text-pale-orange">Hello World</h1>
-        <h2 class="text-dark-blue">Hello World</h2>
-        <h3 class="text-pale-orange">Hello World</h3>
-        <h4 class="text-dark-blue">Hello World</h4>
-
-        <p class="body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. <br>Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed <br>pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor <br>eu nibh.</p>
-
-     
-    </div>
+<body class="bg-light-cream">
+  <header class="py-[44px] px-[81px] flex-between">
+    <img src="./assets/logo.svg" alt="Cofeeroaster" class="w-[235px] h-[26px]">
+    <nav>
+      <a href="#home">home</a>
+      <a href="#about">about us</a>
+      <a href="#plan">create your plan</a>
+    </nav>
+  </header>
 </body>
 
 </html>
