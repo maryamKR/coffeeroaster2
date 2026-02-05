@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+        rel="stylesheet">
+
+    <style type="text/tailwindcss">
+        @theme{
+            /* colors  */
+            --color-dark-cyan: #0E8784;
+            --color-cyan: #66D2CF;
+            --color-dark-blue: #333D4B;
+            --color-pale-orange: #FDD6BA;
+            --color-light-cream: #FEFCF7;
+            --color-grey: #83888F;
+            --color-disabled: #E2DEDB;
+            --color-Midnight:#2C343E;
+            /* fonts */
+            --font-barlow: "Barlow", sans-serif;
+            --font-fraunces: "Fraunces", serif;
+            /* text-size  */
+            --text-10xl: 150px;
+            --text-10xl-line-height: 72px;
+            --text-8xl: 96px;
+            --text-8xl-line-height: 72px;
+            --text-7xl: 72px;
+            --text-7xl-line-height: 72px;
+            --text-4xl: 40px;
+            --text-4xl-line-height: 48px;
+            --text-3xl: 32px;
+            --text-3xl-line-height: 36px;
+            --text-2xl: 24px;
+            --text-2xl-line-height: 32px;
+            --text-base: 16px;
+            --text-base-line-height: 26px;
+            --text-xs: 12px;
+            --text-xs-line-height: 15px;
+        } 
+        .title { @apply text-10xl font-fraunces font-black }
+        h1 { @apply font-fraunces font-black text-7xl  }
+        h2 { @apply font-fraunces font-black text-4xl  }
+        h3 { @apply font-fraunces font-black text-3xl  }
+        h4 { @apply font-fraunces font-black text-2xl  }
+        .title { @apply font-fraunces font-black text-6xl text-center text-grey}
+        body { @apply font-barlow text-base text-dark-blue}
+        nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] flex items-center gap-[32px]}
+        a { @apply hover:text-dark-cyan}
+        button { @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled 
+        text-white font-fraunces font-black text-lg
+        py-[15px] px-[31px] rounded-md }
+        .flex-between {@apply flex justify-between items-center}
+        .flex-center {@apply flex justify-center items-center}
+        img {@apply align-middle}
+
+        .card {@apply bg-dark-cyan rounded-[8px] pt-[72px] px-[48px] pb-[48px] flex items-center flex-col space-y-[56px]}  
+        .number { @apply font-fraunces font-black text-7xl text-pale-orange}
+                 
+    </style>
+</head>
+
+<body class="bg-light-cream">
+
+
+</body>
+
+</html>
