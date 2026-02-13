@@ -61,33 +61,34 @@
         img {@apply align-middle}
         .card {@apply bg-dark-cyan rounded-[8px] pt-[72px] px-[48px] pb-[48px] flex items-center flex-col space-y-[56px]}  
         .number { @apply font-fraunces font-black text-7xl text-pale-orange}
+        .hero { @apply bg-[url('./assets/Bitmap1.jpg')] relative bg-cover bg-center rounded-[10px] h-[450px] text-light-cream}
                  
     </style>
 </head>
 
-<body class="bg-light-cream">
-    <header class="py-[44px] px-[81px] flex-between">
+<body class="bg-light-cream px-[80px]">
+    <header class="py-[44px] flex-between">
         <img src="./assets/logo.svg" alt="Cofeeroaster" class="w-[235px] h-[26px]">
-        <nav>
+        <nav >
             <a href="./index.html">home</a>
             <a href="./about.html">about us</a>
             <a href="#plan">create your plan</a>
         </nav>
     </header>
 
-    <main class="container mx-auto space-y-[168px]">
-        <section
-            class="bg-[url('./assets/Bitmap1.jpg')] bg-cover h-[450px] text-light-cream flex items-center pl-[85px]">
-            <div class="max-w-[493px]">
-                <h1 class="mb-[32px]">About Us</h1>
-                <p class="body mb-[56px]">Coffeeroasters began its journey of exotic discovery in 1999, highlighting
+    <main class="space-y-[168px]">
+        <section class="hero">
+            <div class="w-full h-full z-0 absolute bg-black opacity-50 rounded-[10px]"></div>
+            <div class="relative inline-block z-22 space-y-[24px] left-[85px] top-[137px]">
+                <h2>About Us</h2>
+                <p class="body max-w-[445px]">Coffeeroasters began its journey of exotic discovery in 1999,   highlighting
                     stories of coffee from around the world. We have since been dedicated to bring the perfect cup -
                     from bean to brew - in every shipment.</p>
             </div>
         </section>
 
         <section class="flex-center gap-[125px]">
-            <div><img src="./assets/man.png" class="h-[520px] w-[445px]" alt=""></div>
+            <div><img src="./assets/man.png" class="h-[520px] w-[445px]" alt="Our commitment"></div>
             <div class="max-w-[540px] space-y-[32px]">
                 <h2>Our commitment</h2>
                 <p class="body">We’re built on a simple mission and a commitment to doing good along the way. We want to
@@ -111,7 +112,7 @@
                         goal is to roast consistent, user-friendly coffee, so that brewing is easy and enjoyable.</p>
                 </div>
                 <img src="./assets/caffee.png"
-                    class="w-[445px] h-[474px] absolute top-[-88px] right-[85px] rounded-[10px]" alt="">
+                    class="w-[445px] h-[474px] absolute top-[-88px] right-[85px] rounded-[10px]" alt="Uncompromising quality">
             </div>
         </section>
 

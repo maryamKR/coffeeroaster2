@@ -57,9 +57,11 @@
         text-white font-fraunces font-black text-lg
         py-[15px] px-[31px] rounded-md }
         .flex-between {@apply flex justify-between items-center}
+        .flex-center {@apply flex justify-center items-center}
         img {@apply align-middle}
         .card {@apply bg-dark-cyan rounded-[8px] pt-[72px] px-[48px] pb-[48px] flex items-center flex-col space-y-[56px]}  
         .number { @apply font-fraunces font-black text-7xl text-pale-orange}
+        .hero { @apply bg-[url('./assets/Bitmap1.jpg')] relative bg-cover bg-center rounded-[10px] h-[450px] text-light-cream}
                  
     </style>
 </head>
@@ -88,7 +90,7 @@
         </section>
 
         <section>
-            <div class="text-center"><span class="title">our collection</span></div>
+            <div class="text-center"><span class="title text-grey">our collection</span></div>
             <div class="flex grid-cols-4 gap-[37px] px-[20px]">
                 <div class="space-y-[35px]">
                     <img src="./assets/kopi1 copy.png" class="w-[255px]" alt="Gran Espresso">
