@@ -51,7 +51,7 @@
         h4 { @apply font-fraunces font-black text-2xl  }
         .title { @apply font-fraunces font-black text-6xl text-center text-grey}
         body { @apply font-barlow text-base text-dark-blue}
-        nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] flex items-center gap-[32px]}
+        nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] flex items-center gap-[32px] hidden md:flex}
         a { @apply hover:text-dark-cyan}
         button { @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled 
         text-white font-fraunces font-black text-lg
@@ -62,13 +62,20 @@
         .card {@apply bg-dark-cyan rounded-[8px] pt-[72px] px-[48px] pb-[48px] flex items-center flex-col space-y-[56px]}  
         .number { @apply font-fraunces font-black text-7xl text-pale-orange}
         .hero { @apply bg-[url('./assets/Bitmap1.jpg')] relative bg-cover bg-center rounded-[10px] h-[450px] text-light-cream}
+
+        .hamburger { @apply w-[16px] h-[3px] bg-dark-blue flex md:hidden}
                  
     </style>
 </head>
 
 <body class="bg-light-cream">
-    <header class="py-[44px] px-[81px] flex-between">
-        <img src="./assets/logo.svg" alt="Cofeeroaster" class="w-[235px] h-[26px]">
+    <header class="pt-[32px] pb-[40px] px-[24px] md:py-[44px] md:px-[81px] flex-between">
+        <img src="./assets/logo.svg" alt="Cofeeroaster" class="w-[163px] h-[18px] md:w-[235px] md:h-[26px]">
+        <div class="space-y-[3px]">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+        </div>
         <nav>
             <a href="./index.html">home</a>
             <a href="./about.html">about us</a>
