@@ -63,6 +63,7 @@
         .number { @apply font-fraunces font-black text-7xl text-pale-orange}
         .hero { @apply bg-[url('./assets/Bitmap1.jpg')] relative bg-cover bg-center rounded-[10px] h-[450px] text-light-cream}
 
+        .hero_index { @apply relative bg-[url('./assets/Bitmap.jpg')] bg-cover bg-center h-[600px] rounded-[10px] text-light-cream flex items-center}
         .hamburger { @apply w-[16px] h-[3px] bg-dark-blue flex md:hidden}
                  
     </style>
@@ -83,10 +84,10 @@
         </nav>
     </header>
 
-    <main class="container mx-auto space-y-[92px]">
-        <section
-            class="bg-[url('./assets/Bitmap.jpg')] bg-cover h-[600px] rounded-[10px] text-light-cream flex items-center pl-[85px]">
-            <div class="max-w-[493px]">
+    <main class="container mx-auto px-[24px] space-y-[92px]">
+        <section class="hero_index">
+            <div class="w-full h-full z-2 absolute bg-black opacity-50 rounded-[10px]"></div>
+            <div class="max-w-[493px] relative left-[85px] z-3">
                 <h1 class="mb-[32px]">Great coffee made simple.</h1>
                 <p class="body mb-[56px]">Start your mornings with the world’s
                     best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to
