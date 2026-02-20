@@ -31,8 +31,10 @@
             --text-10xl-line-height: 72px;
             --text-8xl: 96px;
             --text-8xl-line-height: 72px;
-            --text-7xl: 72px;
-            --text-7xl-line-height: 72px;
+
+            --text-7xl: 40px;
+            --text-7xl-line-height: 40px;
+
             --text-4xl: 40px;
             --text-4xl-line-height: 48px;
             --text-3xl: 32px;
@@ -44,6 +46,10 @@
             --text-xs: 12px;
             --text-xs-line-height: 15px;
         } 
+
+       
+
+
         .title { @apply text-10xl font-fraunces font-black }
         h1 { @apply font-fraunces font-black text-7xl  }
         h2 { @apply font-fraunces font-black text-4xl  }
@@ -51,20 +57,27 @@
         h4 { @apply font-fraunces font-black text-2xl  }
         .title { @apply font-fraunces font-black text-6xl text-center text-grey}
         body { @apply font-barlow text-base text-dark-blue}
-        nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] flex items-center gap-[32px] hidden md:flex}
+        nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] items-center gap-[32px] hidden md:flex}
         a { @apply hover:text-dark-cyan}
         button { @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled 
         text-white font-fraunces font-black text-lg
         py-[15px] px-[31px] rounded-md }
-        .flex-between {@apply flex justify-between items-center}
+        .flex-between {@apply flex flex-row justify-between items-center}
         .flex-center {@apply flex justify-center items-center}
         img {@apply align-middle}
-        .card {@apply bg-dark-cyan rounded-[8px] pt-[72px] px-[48px] pb-[48px] flex items-center flex-col space-y-[56px]}  
+        .card {@apply bg-dark-cyan rounded-[8px] lg:pt-[72px] lg:pb-[48px] p-[41px] px-[48px]  flex items-center lg:flex-col flex-row gap-x-[55px]  space-y-[56px]} 
+        .card-content {@apply lg:text-center text-left space-y-[24px]}
         .number { @apply font-fraunces font-black text-7xl text-pale-orange}
         .hero { @apply bg-[url('./assets/Bitmap1.jpg')] relative bg-cover bg-center rounded-[10px] h-[450px] text-light-cream}
 
         .hero_index { @apply relative bg-[url('./assets/Bitmap.jpg')] bg-cover bg-center h-[600px] rounded-[10px] text-light-cream flex items-center}
-        .hamburger { @apply w-[16px] h-[3px] bg-dark-blue flex md:hidden}
+        .hamburger { @apply w-[16px] h-[3px] bg-dark-blue md:hidden}
+
+        .colection {
+            @apply flex lg:flex-col flex-row space-y-[35px]
+        }
+        
+        
                  
     </style>
 </head>
@@ -99,8 +112,9 @@
 
         <section>
             <div class="text-center"><span class="title text-grey">our collection</span></div>
-            <div class="flex grid-cols-4 gap-[37px] px-[20px]">
-                <div class="space-y-[35px]">
+            <div class="grid lg:grid-cols-4 gap-[37px] px-[20px]">
+
+                <div class="colection">
                     <img src="./assets/kopi1 copy.png" class="w-[255px]" alt="Gran Espresso">
                     <div class="space-y-[24px]">
                         <h4>Gran Espresso</h4>
@@ -109,7 +123,7 @@
                     </div>
                 </div>
 
-                <div class="space-y-[35px]">
+                <div class="colection">
                     <img src="./assets/kopi1 copy.png" class="w-[255px]" alt="Gran Espresso">
                     <div class="space-y-[24px]">
                         <h4>Gran Espresso</h4>
@@ -118,7 +132,7 @@
                     </div>
                 </div>
 
-                <div class="space-y-[35px]">
+                <div class="colection">
                     <img src="./assets/kopi1 copy.png" class="w-[255px]" alt="Gran Espresso">
                     <div class="space-y-[24px]">
                         <h4>Gran Espresso</h4>
@@ -127,7 +141,7 @@
                     </div>
                 </div>
 
-                <div class="space-y-[35px]">
+                <div class="colection">
                     <img src="./assets/kopi1 copy.png" class="w-[255px]" alt="Gran Espresso">
                     <div class="space-y-[24px]">
                         <h4>Gran Espresso</h4>
@@ -138,9 +152,10 @@
             </div>
         </section>
 
-        <section class="bg-Midnight rounded-[10px] text-light-cream h-[577px] 
-            flex flex-col items-center space-y-[86px]">
-            <div class="max-w-[540px] space-y-[32px] text-center pt-[100px]">
+        <section class="-space-y-[231px]">
+            <div class="bg-Midnight rounded-[10px] text-light-cream h-[577px] 
+            flex flex-col items-center lg:space-y-[86px] space-y-[70px]">
+                 <div class="max-w-[540px] space-y-[32px] text-center lg:pt-[100px] pt-[56px]">
                 <h2>Why choose us?</h2>
                 <p class="body space-y-[24px]">
                     A large part of our role is buying great coffee as well as
@@ -149,11 +164,12 @@
                     growers to give you a more impactful experience on every level.
                 </p>
             </div>
-            <div class="grid grid-cols-3 gap-[30px] px-[85px]">
+            </div>
+           <div class="grid lg:grid-cols-3 gap-[30px] px-[85px]">
                 <!-- card 1 -->
                 <div class="card">
                     <img src="./assets/coffee-bean.svg" alt="coffee-bean" class="w-[72px] h-[72px]">
-                    <div class="text-center space-y-[24px]">
+                    <div class="card-content">
                         <h4>Best quality</h4>
                         <p class="body">
                             Discover an endless variety of the world’s
@@ -163,7 +179,7 @@
                 </div>
                 <div class="card">
                     <img src="./assets/Combined Shape (3).svg" alt="coffee-bean" class="w-[72px] h-[72px]">
-                    <div class="text-center space-y-[24px]">
+                    <div class="card-content">
                         <h4>Exclusive benefits</h4>
                         <p class="body">
                             Special offers and swag when you subscribe, including 30% off your first shipment.
@@ -172,7 +188,7 @@
                 </div>
                 <div class="card">
                     <img src="./assets/Combined Shape (4).svg" alt="coffee-bean" class="w-[72px] h-[72px]">
-                    <div class="text-center space-y-[24px]">
+                    <div class="card-content">
                         <h4>Free shipping</h4>
                         <p class="body">
                             We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.
@@ -182,10 +198,10 @@
             </div>
         </section>
 
-        <section class="mt-[296px] max-w-[1045px] mx-auto">
+        <section class="max-w-[1045px] mx-auto">
             <h4 class="mb-[32px] text-grey">How it works</h4>
 
-            <div class="grid grid-cols-3 gap-[95px] mb-[90px]">
+            <div class="grid md:grid-cols-3 gap-[95px] lg:mb-[90px] mb-[44px]">
                 <div class="space-y-[38px]">
                     <div class="number">01</div>
                     <div class="space-y-[42px]">
@@ -222,17 +238,17 @@
         </section>
     </main>
 
-    <footer class="container mx-auto bg-Midnight h-[120px] flex-between  mt-[115px] px-[85px] mb-[88px]">
-        <div class="flex gap-[103px]">
+    <footer class="container mx-auto bg-Midnight flex flex-col lg:flex-row lg:gap-x-[368px] gap-y-[65px] items-center mt-[115px] pt-[47px] pb-[49px] px-[85px] mb-[88px]">
+        <div class="flex flex-col lg:flex-row lg:gap-x-[103px] gap-y-[32px]">
             <img src="assets/Group 5.png" alt="Cofeeroaster" class="w-[235px] h-[25px]">
             <nav>
                 <a href="#home">home</a>
                 <a href="./about.html">about us</a>
                 <a href="#plan">Create your plan</a>
             </nav>
-
         </div>
-        <div class="flex-between gap-[24px]">
+
+        <div class="flex gap-[24px]">
             <a href="www.facebook.com"><img src="assets/Path (2).svg" alt="Facebook"></a>
             <a href="www.instagram.com"><img src="assets/Shape.svg" alt="Instagram"></a>
             <a href="www.twitter"><img src="assets/Path.svg" alt="Twitter"></a>
