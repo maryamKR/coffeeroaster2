@@ -31,17 +31,19 @@
             --text-10xl-line-height: 72px;
             --text-8xl: 96px;
             --text-8xl-line-height: 72px;
-
             --text-7xl: 40px;
             --text-7xl-line-height: 40px;
-
             --text-4xl: 40px;
             --text-4xl-line-height: 48px;
             --text-3xl: 32px;
             --text-3xl-line-height: 36px;
-            --text-2xl: 24px;
-            --text-2xl-line-height: 32px;
-            --text-base: 16px;
+            --text-2xl: 28px;
+            --text-2xl-line-height: 28px;
+            --text-1xl: 24px;
+            --text-1xl-line-height: 32px;
+            --text-lg-base: 16px;
+            --text-base-line-height: 26px;
+            --text-base: 15px;
             --text-base-line-height: 26px;
             --text-xs: 12px;
             --text-xs-line-height: 15px;
@@ -50,13 +52,12 @@
        
 
 
-        .title { @apply text-10xl font-fraunces font-black }
-        h1 { @apply font-fraunces font-black text-7xl  }
-        h2 { @apply font-fraunces font-black text-4xl  }
-        h3 { @apply font-fraunces font-black text-3xl  }
-        h4 { @apply font-fraunces font-black text-2xl  }
-        .title { @apply font-fraunces font-black text-6xl text-center text-grey}
-        body { @apply font-barlow text-base text-dark-blue}
+        .title { @apply text-10xl font-fraunces font-black text-center text-grey}
+        h1 { @apply font-fraunces font-black text-4xl md:text-5xl lg:text-7xl}
+        h2 { @apply font-fraunces font-black text-2xl md:text-3xl lg:text-4xl}
+        h3 { @apply font-fraunces font-black text-2xl lg:text-3xl}
+        h4 { @apply font-fraunces font-black text-1xl}
+        body { @apply font-barlow text-base lg:text-lg-base text-dark-blue}
         nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] items-center gap-[32px] hidden md:flex}
         a { @apply hover:text-dark-cyan}
         button { @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled 
