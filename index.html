@@ -75,8 +75,9 @@
         .colection {
             @apply flex lg:flex-col flex-row space-y-[35px]
         }
-
         .linear {@apply  bg-[linear-gradient(to_bottom,_#d0d1d0_0.01%,_#FEFCF7)] bg-clip-text text-transparent}
+        .circle {@apply inline-block w-[31px] h-[31px] bg-light-cream border-2 border-solid border-dark-cyan rounded-full relative z-1}
+        .line {@apply w-[467px] h-[2px] bg-pale-orange absolute left-[20px] z-0}
         
         
                  
@@ -167,7 +168,7 @@
                 </p>
             </div>
             </div>
-           <div class="grid lg:grid-cols-3 gap-[30px] px-[85px]">
+           <div class="grid lg:grid-cols-3 gap-[30px] text-light-cream px-[85px]">
                 <!-- card 1 -->
                 <div class="card">
                     <img src="./assets/coffee-bean.svg" alt="coffee-bean" class="w-[72px] h-[72px]">
@@ -202,6 +203,15 @@
 
         <section class="max-w-[1045px] mx-auto">
             <h4 class="mb-[32px] text-grey">How it works</h4>
+
+            <div class="hidden md:flex lg:hidden relative items-center mb-[48px]">
+                <div class="space-x-[202px]">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <span class="line"></span>
+            </div>
 
             <div class="grid md:grid-cols-3 gap-[95px] lg:mb-[90px] mb-[44px]">
                 <div class="space-y-[38px]">
