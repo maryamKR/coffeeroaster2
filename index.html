@@ -27,8 +27,6 @@
             --font-barlow: "Barlow", sans-serif;
             --font-fraunces: "Fraunces", serif;
             /* text-size  */
-            --text-10xl: 150px;
-            --text-10xl-line-height: 72px;
             --text-8xl: 96px;
             --text-8xl-line-height: 72px;
             --text-7xl: 40px;
@@ -52,7 +50,7 @@
        
 
 
-        .title { @apply text-10xl font-fraunces font-black text-center text-grey}
+        .title { @apply text-8xl font-fraunces font-black text-center}
         h1 { @apply font-fraunces font-black text-4xl md:text-5xl lg:text-7xl}
         h2 { @apply font-fraunces font-black text-2xl md:text-3xl lg:text-4xl}
         h3 { @apply font-fraunces font-black text-2xl lg:text-3xl}
@@ -77,6 +75,8 @@
         .colection {
             @apply flex lg:flex-col flex-row space-y-[35px]
         }
+
+        .linear {@apply  bg-[linear-gradient(to_bottom,_#d0d1d0_0.01%,_#FEFCF7)] bg-clip-text text-transparent}
         
         
                  
@@ -112,7 +112,8 @@
         </section>
 
         <section>
-            <div class="text-center"><span class="title text-grey">our collection</span></div>
+
+            <span class="title text-center block linear">our collection</span>
             <div class="grid lg:grid-cols-4 gap-[37px] px-[20px]">
 
                 <div class="colection">
