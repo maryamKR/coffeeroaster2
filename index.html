@@ -64,8 +64,9 @@
         .flex-between {@apply flex flex-row justify-between items-center}
         .flex-center {@apply flex justify-center items-center}
         img {@apply align-middle}
-        .card {@apply bg-dark-cyan rounded-[8px] lg:pt-[72px] lg:pb-[48px] p-[41px] px-[48px]  flex items-center lg:flex-col flex-row gap-x-[55px]  space-y-[56px]} 
-        .card-content {@apply lg:text-center text-left space-y-[24px]}
+        .card {@apply bg-dark-cyan rounded-[8px] pt-[72px] pb-[51px] px-[12px] md:py-[41px] md:pl-[70px] md:pr-[48px] lg:px-[48px] lg:pt-[72px] lg:pb-[48px] flex items-center flex-col lg:flex-col md:flex-row gap-x-[55px] space-y-[56px] lg:space-y-[56px]} 
+
+        .card-content {@apply text-center md:text-left lg:text-center space-y-[24px] md:space-y-[16px] lg:space-y-[24px]}
         .number { @apply font-fraunces font-black text-7xl text-pale-orange}
         .hero { @apply bg-[url('./assets/Bitmap1.jpg')] relative bg-cover bg-center rounded-[10px] h-[450px] text-light-cream}
 
@@ -83,7 +84,7 @@
         header {@apply pt-[32px] pb-[40px] md:py-[44px] px-[24px] md:px-[80px] flex flex-row justify-between items-center}
 
         main {
-            @apply px-[24px] md:px-[80px] space-y-[120px] md:space-y-[144px] lg:space-y-[92px]
+            @apply px-[24px] md:px-[40px] lg:px-[80px] space-y-[120px] md:space-y-[144px] lg:space-y-[92px]
         }
 
         .overlay {@apply w-full h-full z-2 absolute bg-black opacity-50 rounded-[10px]}
@@ -162,12 +163,11 @@
             </div>
         </section>
 
-        <section class="-space-y-[231px]">
-            <div class="bg-Midnight rounded-[10px] text-light-cream h-[577px] 
-            flex flex-col items-center lg:space-y-[86px] space-y-[70px]">
-                 <div class="max-w-[540px] space-y-[32px] text-center lg:pt-[100px] pt-[56px]">
+        <section class="-space-y-[597px] md:-space-y-[298px] lg:-space-y-[231px]">
+            <div class="bg-Midnight rounded-[10px] text-light-cream h-[902px] md:h-[577px]">
+                 <div class="max-w-[279px] md:max-w-[540px] m-auto text-center space-y-[24px] lg:space-y-[32px] pt-[64px] md:pt-[56px] lg:pt-[100px]">
                 <h2>Why choose us?</h2>
-                <p class="body space-y-[24px]">
+                <p class="body">
                     A large part of our role is buying great coffee as well as
                     helping international buyers discover exceptional coffee from
                     around the world. This means working closely with the best coffee
@@ -175,7 +175,7 @@
                 </p>
             </div>
             </div>
-           <div class="grid lg:grid-cols-3 gap-[30px] text-light-cream px-[85px]">
+           <div class="grid lg:grid-cols-3 lg:gap-[30px] gap-[24px] text-light-cream px-[24px] md:px-[58px] lg:px-[85px]">
                 <!-- card 1 -->
                 <div class="card">
                     <img src="./assets/coffee-bean.svg" alt="coffee-bean" class="w-[72px] h-[72px]">
