@@ -69,8 +69,8 @@
         .number { @apply font-fraunces font-black text-7xl text-pale-orange}
         .hero { @apply bg-[url('./assets/Bitmap1.jpg')] relative bg-cover bg-center rounded-[10px] h-[450px] text-light-cream}
 
-        .hero_index { @apply relative bg-[url('./assets/Bitmap.jpg')] bg-cover bg-center h-[600px] rounded-[10px] text-light-cream flex items-center}
-        .hamburger { @apply w-[16px] h-[3px] bg-dark-blue md:hidden}
+        .hero_index { @apply relative bg-[url('./assets/Bitmap.jpg')] bg-cover bg-center h-[500px] lg:h-[600px] rounded-[10px] text-light-cream flex items-center}
+        .hamburger { @apply w-[16px] h-[3px] bg-dark-blue block md:hidden}
 
         .colection {
             @apply flex lg:flex-col flex-row space-y-[35px]
@@ -78,8 +78,7 @@
         .linear {@apply  bg-[linear-gradient(to_bottom,_#d0d1d0_0.01%,_#FEFCF7)] bg-clip-text text-transparent}
         .circle {@apply inline-block w-[31px] h-[31px] bg-light-cream border-2 border-solid border-dark-cyan rounded-full relative z-1}
         .line {@apply w-[467px] h-[2px] bg-pale-orange absolute left-[20px] z-0}
-        
-        
+          
                  
     </style>
 </head>
@@ -102,9 +101,9 @@
     <main class="container mx-auto px-[24px] space-y-[92px]">
         <section class="hero_index">
             <div class="w-full h-full z-2 absolute bg-black opacity-50 rounded-[10px]"></div>
-            <div class="max-w-[493px] relative left-[85px] z-3">
-                <h1 class="mb-[32px]">Great coffee made simple.</h1>
-                <p class="body mb-[56px]">Start your mornings with the world’s
+            <div class="max-w-[398px] lg:max-w-[493px] relative px-[24px] text-center md:text-left md:left-[58px] lg:left-[85px] z-3">
+                <h1 class="mb-[24px] lg:mb-[32px]">Great coffee made simple.</h1>
+                <p class="body mb-[39px] md:mb-[40px] lg:mb-[56px]">Start your mornings with the world’s
                     best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to
                     your door,
                     at your schedule.</p>
