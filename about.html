@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
         rel="stylesheet">
 
-    <style type="text/tailwindcss">
+        <style type="text/tailwindcss">
         @theme{
             /* colors  */
             --color-dark-cyan: #0E8784;
@@ -27,48 +27,94 @@
             --font-barlow: "Barlow", sans-serif;
             --font-fraunces: "Fraunces", serif;
             /* text-size  */
-            --text-10xl: 150px;
-            --text-10xl-line-height: 72px;
             --text-8xl: 96px;
             --text-8xl-line-height: 72px;
-            --text-7xl: 72px;
-            --text-7xl-line-height: 72px;
+            --text-7xl: 40px;
+            --text-7xl-line-height: 40px;
             --text-4xl: 40px;
             --text-4xl-line-height: 48px;
             --text-3xl: 32px;
             --text-3xl-line-height: 36px;
-            --text-2xl: 24px;
-            --text-2xl-line-height: 32px;
-            --text-base: 16px;
+            --text-2xl: 28px;
+            --text-2xl-line-height: 28px;
+            --text-1xl: 24px;
+            --text-1xl-line-height: 32px;
+            --text-lg-base: 16px;
             --text-base-line-height: 26px;
+            --text-base: 15px;
+            --text-base-line-height: 25px;
             --text-xs: 12px;
             --text-xs-line-height: 15px;
         } 
-        .title { @apply text-10xl font-fraunces font-black }
-        h1 { @apply font-fraunces font-black text-7xl  }
-        h2 { @apply font-fraunces font-black text-4xl  }
-        h3 { @apply font-fraunces font-black text-3xl  }
-        h4 { @apply font-fraunces font-black text-2xl  }
-        .title { @apply font-fraunces font-black text-6xl text-center text-grey}
-        body { @apply font-barlow text-base text-dark-blue}
-        nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] flex items-center gap-[32px]}
-        a { @apply hover:text-dark-cyan}
-        button { @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled 
-        text-white font-fraunces font-black text-lg
-        py-[15px] px-[31px] rounded-md }
-        .flex-between {@apply flex justify-between items-center}
-        .flex-center {@apply flex justify-center items-center}
-        img {@apply align-middle}
-        .card {@apply bg-dark-cyan rounded-[8px] pt-[72px] px-[48px] pb-[48px] flex items-center flex-col space-y-[56px]}  
-        .number { @apply font-fraunces font-black text-7xl text-pale-orange}
-        .hero { @apply bg-[url('./assets/Bitmap1.jpg')] relative bg-cover bg-center rounded-[10px] h-[450px] text-light-cream}
+
+       
+        body { 
+            @apply font-barlow text-base lg:text-lg-base text-dark-blue }
+        h1 {
+            @apply font-fraunces font-black text-4xl md:text-5xl lg:text-7xl }
+        h2 { 
+            @apply font-fraunces font-black text-2xl md:text-3xl lg:text-4xl }
+        h3 { 
+            @apply font-fraunces font-black text-2xl lg:text-3xl }
+        h4 { 
+            @apply font-fraunces font-black text-1xl }
+        .title { 
+            @apply text-7xl md:text-8xl font-fraunces font-black text-center}
+        a { 
+            @apply hover:text-dark-cyan}
+        img {
+            @apply align-middle}
+        button { 
+            @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled text-white font-fraunces font-black text-lg py-[15px] px-[31px] rounded-md }       
+        .flex-between {
+            @apply flex flex-row justify-between items-center}
+        .flex-center {
+            @apply flex justify-center items-center}
+        .overlay {
+            @apply w-full h-full z-2 absolute bg-black opacity-50 rounded-[10px]}
+        header {@apply pt-[32px] pb-[40px] md:py-[44px] px-[24px] md:px-[80px] flex flex-row justify-between items-center}
+        nav { 
+            @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] items-center gap-[33px] hidden md:flex}
+        .hamburger {
+            @apply w-[16px] h-[3px] bg-dark-blue block md:hidden}
+        main {
+            @apply px-[24px] md:px-[40px] lg:px-[80px] space-y-[120px] md:space-y-[144px] lg:space-y-[115px]
+        }
+        footer {
+            @apply bg-Midnight flex flex-col lg:flex-row justify-between gap-y-[48px] md:gap-y-[65px] items-center py-[54px] lg:pt-[47px] lg:pb-[49px] lg:px-[85px] mx-[24px] md:mx-[40px] lg:mx-[80px] mt-[120px] md:mt-[144px] lg:mt-[115px] mb-[72px]
+        }
+        .footer_content {
+            @apply flex flex-col lg:flex-row lg:gap-x-[103px] items-center gap-y-[48px] md:gap-y-[32px]}
+        .footer_nav {
+            @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] items-center gap-[33px] flex flex-col md:flex-row
+        }
+
+
+
+
+
+        .hero_about {
+            @apply bg-[url('./assets/Bitmap1.jpg')] relative bg-cover bg-center rounded-[10px] h-[450px] text-light-cream }
+
+        .heroAbout_content{
+            @apply relative inline-block z-22 space-y-[24px] px-[24px] pt-[111px] text-center md:text-left md:pl-[58px] md:pt-[118px] lg:pl-[85px] lg:pt-[137px] }
+
+
+
+
+          
                  
     </style>
 </head>
 
-<body class="bg-light-cream px-[80px]">
-    <header class="py-[44px] flex-between">
+<body class="bg-light-cream">
+    <header>
         <img src="./assets/logo.svg" alt="Cofeeroaster" class="w-[235px] h-[26px]">
+        <div class="space-y-[3px]">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+        </div>
         <nav >
             <a href="./index.html">home</a>
             <a href="./about.html">about us</a>
@@ -76,10 +122,10 @@
         </nav>
     </header>
 
-    <main class="space-y-[168px]">
-        <section class="hero">
-            <div class="w-full h-full z-0 absolute bg-black opacity-50 rounded-[10px]"></div>
-            <div class="relative inline-block z-22 space-y-[24px] left-[85px] top-[137px]">
+    <main>
+        <section class="hero_about">
+            <div class="overlay"></div>
+            <div class="heroAbout_content">
                 <h2>About Us</h2>
                 <p class="body max-w-[445px]">Coffeeroasters began its journey of exotic discovery in 1999,   highlighting
                     stories of coffee from around the world. We have since been dedicated to bring the perfect cup -

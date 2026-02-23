@@ -42,60 +42,91 @@
             --text-lg-base: 16px;
             --text-base-line-height: 26px;
             --text-base: 15px;
-            --text-base-line-height: 26px;
+            --text-base-line-height: 25px;
             --text-xs: 12px;
             --text-xs-line-height: 15px;
         } 
 
        
+        body { 
+            @apply font-barlow text-base lg:text-lg-base text-dark-blue }
+        h1 {
+            @apply font-fraunces font-black text-4xl md:text-5xl lg:text-7xl }
+        h2 { 
+            @apply font-fraunces font-black text-2xl md:text-3xl lg:text-4xl }
+        h3 { 
+            @apply font-fraunces font-black text-2xl lg:text-3xl }
+        h4 { 
+            @apply font-fraunces font-black text-1xl }
+        .title { 
+            @apply text-7xl md:text-8xl font-fraunces font-black text-center}
+        a { 
+            @apply hover:text-dark-cyan}
+        img {
+            @apply align-middle}
+        button { 
+            @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled text-white font-fraunces font-black text-lg py-[15px] px-[31px] rounded-md }       
+        .flex-between {
+            @apply flex flex-row justify-between items-center}
+        .flex-center {
+            @apply flex justify-center items-center}
+        .overlay {
+            @apply w-full h-full z-2 absolute bg-black opacity-50 rounded-[10px]}
+        header {@apply pt-[32px] pb-[40px] md:py-[44px] px-[24px] md:px-[80px] flex flex-row justify-between items-center}
+        nav { 
+            @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] items-center gap-[33px] hidden md:flex}
+        .hamburger {
+            @apply w-[16px] h-[3px] bg-dark-blue block md:hidden}
+        main {
+            @apply px-[24px] md:px-[40px] lg:px-[80px] space-y-[120px] md:space-y-[144px] lg:space-y-[115px]
+        }
+        footer {
+            @apply bg-Midnight flex flex-col lg:flex-row justify-between gap-y-[48px] md:gap-y-[65px] items-center py-[54px] lg:pt-[47px] lg:pb-[49px] lg:px-[85px] mx-[24px] md:mx-[40px] lg:mx-[80px] mt-[120px] md:mt-[144px] lg:mt-[115px] mb-[72px]
+        }
+        .footer_content {
+            @apply flex flex-col lg:flex-row lg:gap-x-[103px] items-center gap-y-[48px] md:gap-y-[32px]}
+        .footer_nav {
+            @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] items-center gap-[33px] flex flex-col md:flex-row
+        }     
 
 
-        .title { @apply text-7xl md:text-8xl font-fraunces font-black text-center}
-        h1 { @apply font-fraunces font-black text-4xl md:text-5xl lg:text-7xl}
-        h2 { @apply font-fraunces font-black text-2xl md:text-3xl lg:text-4xl}
-        h3 { @apply font-fraunces font-black text-2xl lg:text-3xl}
-        h4 { @apply font-fraunces font-black text-1xl}
-        body { @apply font-barlow text-base lg:text-lg-base text-dark-blue}
-        nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] items-center gap-[33px] hidden md:flex}
-        a { @apply hover:text-dark-cyan}
-        button { @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled 
-        text-white font-fraunces font-black text-lg
-        py-[15px] px-[31px] rounded-md }
-        .flex-between {@apply flex flex-row justify-between items-center}
-        .flex-center {@apply flex justify-center items-center}
-        img {@apply align-middle}
-        .card {@apply bg-dark-cyan rounded-[8px] pt-[72px] pb-[51px] px-[12px] md:py-[41px] md:pl-[70px] md:pr-[48px] lg:px-[48px] lg:pt-[72px] lg:pb-[48px] flex items-center flex-col lg:flex-col md:flex-row space-y-[56px] md:space-y-[0px] md:space-x-[55px] lg:space-y-[56px]} 
+        .hero_index {
+            @apply relative bg-[url('./assets/Bitmap.jpg')] bg-cover bg-center h-[500px] lg:h-[600px] rounded-[10px] text-light-cream flex items-center}
 
-        .card-content {@apply text-center md:text-left lg:text-center space-y-[24px] md:space-y-[16px] lg:space-y-[24px]}
-        .number { @apply font-fraunces font-black text-7xl text-pale-orange}
-        .hero { @apply bg-[url('./assets/Bitmap1.jpg')] relative bg-cover bg-center rounded-[10px] h-[450px] text-light-cream}
+        .heroIndex_content {@apply max-w-[398px] lg:max-w-[493px] relative px-[24px] text-center md:text-left md:left-[58px] lg:left-[85px] z-3}            
 
-        .hero_index { @apply relative bg-[url('./assets/Bitmap.jpg')] bg-cover bg-center h-[500px] lg:h-[600px] rounded-[10px] text-light-cream flex items-center}
-        .hamburger { @apply w-[16px] h-[3px] bg-dark-blue block md:hidden}
 
         .colection {
             @apply flex flex-col md:flex-row lg:flex-col items-center text-center md:text-left space-y-[24px] md:space-y-[0px] lg:space-y-[35px]
         }
-        .colection_content {@apply space-y-[16px] md:space-y-[24px]}
-        .linear {@apply  bg-[linear-gradient(to_bottom,_#d0d1d0_0.01%,_#FEFCF7)] bg-clip-text text-transparent}
-        .circle {@apply inline-block w-[31px] h-[31px] bg-light-cream border-2 border-solid border-dark-cyan rounded-full relative z-1}
-        .line {@apply w-[467px] h-[2px] bg-pale-orange absolute left-[20px] z-0}
+        .colection_content {
+            @apply space-y-[16px] md:space-y-[24px]}
+        .linear {@apply  bg-[linear-gradient(to_bottom,_#b5b5b5_0.01%,_#FEFCF7)] bg-clip-text text-transparent}
 
-        header {@apply pt-[32px] pb-[40px] md:py-[44px] px-[24px] md:px-[80px] flex flex-row justify-between items-center}
+        .card {
+            @apply bg-dark-cyan rounded-[8px] pt-[72px] pb-[51px] px-[12px] md:py-[41px] md:pl-[70px] md:pr-[48px] lg:px-[48px] lg:pt-[72px] lg:pb-[48px] flex items-center flex-col lg:flex-col md:flex-row space-y-[56px] md:space-y-[0px] md:space-x-[55px] lg:space-y-[56px]} 
+        .card-content {
+            @apply text-center md:text-left lg:text-center space-y-[24px] md:space-y-[16px] lg:space-y-[24px]}
 
-        main {
-            @apply px-[24px] md:px-[40px] lg:px-[80px] space-y-[120px] md:space-y-[144px] lg:space-y-[115px]
-        }
+        .number {
+            @apply font-fraunces font-black text-7xl text-pale-orange}
+        .how-Works-content {
+            @apply space-y-[24px] md:space-y-[42px] }
 
-        .overlay {@apply w-full h-full z-2 absolute bg-black opacity-50 rounded-[10px]}
+        .circle {
+            @apply inline-block w-[31px] h-[31px] bg-light-cream border-2 border-solid border-dark-cyan rounded-full relative z-1}
+        .line {
+            @apply w-[467px] h-[2px] bg-pale-orange absolute left-[20px] z-0}
 
-        footer {
-            @apply bg-Midnight flex flex-col lg:flex-row justify-between gap-y-[48px] md:gap-y-[65px] items-center py-[54px] lg:pt-[47px] lg:pb-[49px] lg:px-[85px] mx-[24px] md:mx-[40px] lg:mx-[80px] mt-[120px] md:mt-[144px] lg:mt-[115px] mb-[72px]
-        }
 
-        .footer_nav {
-            @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] items-center gap-[33px] flex flex-col md:flex-row
-        }
+
+
+
+
+
+
+
+
           
                  
     </style>
@@ -119,7 +150,7 @@
     <main>
         <section class="hero_index">
             <div class="overlay"></div>
-            <div class="max-w-[398px] lg:max-w-[493px] relative px-[24px] text-center md:text-left md:left-[58px] lg:left-[85px] z-3">
+            <div class="heroIndex_content">
                 <h1 class="mb-[24px] lg:mb-[32px]">Great coffee made simple.</h1>
                 <p class="body mb-[39px] md:mb-[40px] lg:mb-[56px]">Start your mornings with the world’s
                     best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to
@@ -171,9 +202,9 @@
             </div>
         </section>
 
-        <section class="-space-y-[597px] md:-space-y-[298px] lg:-space-y-[231px]">
+        <section class="-space-y-[573px] md:-space-y-[298px] lg:-space-y-[231px]">
             <div class="bg-Midnight rounded-[10px] text-light-cream h-[902px] md:h-[577px]">
-                 <div class="max-w-[279px] md:max-w-[540px] m-auto text-center space-y-[24px] lg:space-y-[32px] pt-[64px] md:pt-[56px] lg:pt-[100px]">
+                 <div class="max-w-[279px] md:max-w-[540px] mx-auto text-center space-y-[24px] lg:space-y-[32px] pt-[64px] md:pt-[56px] lg:pt-[100px]">
                 <h2>Why choose us?</h2>
                 <p class="body">
                     A large part of our role is buying great coffee as well as
@@ -231,7 +262,7 @@
             <div class="grid md:grid-cols-3 gap-y-[56px] md:gap-x-[26px] lg:gap-x-[95px] lg:mb-[90px] mb-[44px]">
                 <div class="space-y-[24px] md:space-y-[38px]">
                     <div class="number">01</div>
-                    <div class="space-y-[24px] md:space-y-[42px]">
+                    <div class="how-Works-content">
                         <h3 class="md:max-w-[255px]">Pick your coffee</h3>
                         <p class="body">Select from our evolving range of artisan coffees. Our beans are ethically
                             sourced and we pay fair prices for them. There are new coffees in all profiles every month
@@ -241,7 +272,7 @@
 
                 <div class="space-y-[24px] md:space-y-[38px]">
                     <div class="number">02</div>
-                    <div class="space-y-[24px] md:space-y-[42px]">
+                    <div class="how-Works-content">
                         <h3 class="md:max-w-[255px]">Choose the frequency</h3>
                         <p class="body">Select from our evolving range of artisan coffees. Our beans are ethically
                             sourced and we pay fair prices for them. There are new coffees in all profiles every month
@@ -251,7 +282,7 @@
 
                 <div class="space-y-[24px] md:space-y-[38px]">
                     <div class="number">03</div>
-                    <div class="space-y-[24px] md:space-y-[42px]">
+                    <div class="how-Works-content">
                         <h3 class="md:max-w-[255px]">Receive and enjoy!</h3>
                         <p class="body">Select from our evolving range of artisan coffees. Our beans are ethically
                             sourced and we pay fair prices for them. There are new coffees in all profiles every month
@@ -266,7 +297,7 @@
     </main>
 
     <footer>
-        <div class="flex flex-col lg:flex-row lg:gap-x-[103px] items-center gap-y-[48px] md:gap-y-[32px]">
+        <div class="footer_content">
             <img src="assets/Group 5.png" alt="Cofeeroaster" class="w-[235px] h-[25px]">
             <nav class="footer_nav">
                 <a href="#home">home</a>
