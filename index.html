@@ -56,7 +56,7 @@
         h3 { @apply font-fraunces font-black text-2xl lg:text-3xl}
         h4 { @apply font-fraunces font-black text-1xl}
         body { @apply font-barlow text-base lg:text-lg-base text-dark-blue}
-        nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] items-center gap-[32px] hidden md:flex}
+        nav { @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] items-center gap-[33px] hidden md:flex}
         a { @apply hover:text-dark-cyan}
         button { @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled 
         text-white font-fraunces font-black text-lg
@@ -64,7 +64,7 @@
         .flex-between {@apply flex flex-row justify-between items-center}
         .flex-center {@apply flex justify-center items-center}
         img {@apply align-middle}
-        .card {@apply bg-dark-cyan rounded-[8px] pt-[72px] pb-[51px] px-[12px] md:py-[41px] md:pl-[70px] md:pr-[48px] lg:px-[48px] lg:pt-[72px] lg:pb-[48px] flex items-center flex-col lg:flex-col md:flex-row gap-x-[55px] space-y-[56px] lg:space-y-[56px]} 
+        .card {@apply bg-dark-cyan rounded-[8px] pt-[72px] pb-[51px] px-[12px] md:py-[41px] md:pl-[70px] md:pr-[48px] lg:px-[48px] lg:pt-[72px] lg:pb-[48px] flex items-center flex-col lg:flex-col md:flex-row space-y-[56px] md:space-y-[0px] md:space-x-[55px] lg:space-y-[56px]} 
 
         .card-content {@apply text-center md:text-left lg:text-center space-y-[24px] md:space-y-[16px] lg:space-y-[24px]}
         .number { @apply font-fraunces font-black text-7xl text-pale-orange}
@@ -84,10 +84,18 @@
         header {@apply pt-[32px] pb-[40px] md:py-[44px] px-[24px] md:px-[80px] flex flex-row justify-between items-center}
 
         main {
-            @apply px-[24px] md:px-[40px] lg:px-[80px] space-y-[120px] md:space-y-[144px] lg:space-y-[92px]
+            @apply px-[24px] md:px-[40px] lg:px-[80px] space-y-[120px] md:space-y-[144px] lg:space-y-[115px]
         }
 
         .overlay {@apply w-full h-full z-2 absolute bg-black opacity-50 rounded-[10px]}
+
+        footer {
+            @apply bg-Midnight flex flex-col lg:flex-row justify-between gap-y-[48px] md:gap-y-[65px] items-center py-[54px] lg:pt-[47px] lg:pb-[49px] lg:px-[85px] mx-[24px] md:mx-[40px] lg:mx-[80px] mt-[120px] md:mt-[144px] lg:mt-[115px] mb-[72px]
+        }
+
+        .footer_nav {
+            @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] items-center gap-[33px] flex flex-col md:flex-row
+        }
           
                  
     </style>
@@ -181,7 +189,7 @@
                     <img src="./assets/coffee-bean.svg" alt="coffee-bean" class="w-[72px] h-[72px]">
                     <div class="card-content">
                         <h4>Best quality</h4>
-                        <p class="body">
+                        <p class="body max-w-[212px]">
                             Discover an endless variety of the world’s
                             best artisan coffee from each of our roasters.
                         </p>
@@ -191,7 +199,7 @@
                     <img src="./assets/Combined Shape (3).svg" alt="coffee-bean" class="w-[72px] h-[72px]">
                     <div class="card-content">
                         <h4>Exclusive benefits</h4>
-                        <p class="body">
+                        <p class="body max-w-[212px]">
                             Special offers and swag when you subscribe, including 30% off your first shipment.
                         </p>
                     </div>
@@ -200,7 +208,7 @@
                     <img src="./assets/Combined Shape (4).svg" alt="coffee-bean" class="w-[72px] h-[72px]">
                     <div class="card-content">
                         <h4>Free shipping</h4>
-                        <p class="body">
+                        <p class="body max-w-[212px]">
                             We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.
                         </p>
                     </div>
@@ -257,10 +265,10 @@
         </section>
     </main>
 
-    <footer class="container mx-auto bg-Midnight flex flex-col lg:flex-row lg:gap-x-[368px] gap-y-[65px] items-center mt-[115px] pt-[47px] pb-[49px] px-[85px] mb-[88px]">
-        <div class="flex flex-col lg:flex-row lg:gap-x-[103px] gap-y-[32px]">
+    <footer>
+        <div class="flex flex-col lg:flex-row lg:gap-x-[103px] items-center gap-y-[48px] md:gap-y-[32px]">
             <img src="assets/Group 5.png" alt="Cofeeroaster" class="w-[235px] h-[25px]">
-            <nav>
+            <nav class="footer_nav">
                 <a href="#home">home</a>
                 <a href="./about.html">about us</a>
                 <a href="#plan">Create your plan</a>
