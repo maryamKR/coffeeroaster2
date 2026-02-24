@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cofeeroaster</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,13 +66,9 @@
             @apply align-middle}
         button { 
             @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled text-white font-fraunces font-black text-lg py-[15px] px-[31px] rounded-md }       
-        .flex-between {
-            @apply flex flex-row justify-between items-center}
-        .flex-center {
-            @apply flex justify-center items-center}
         .overlay {
             @apply w-full h-full z-2 absolute bg-black opacity-50 rounded-[10px]}
-        header {@apply pt-[32px] pb-[40px] md:py-[44px] px-[24px] md:px-[80px] flex flex-row justify-between items-center}
+        header {@apply pt-[32px] pb-[40px] md:py-[44px] px-[24px] md:px-[80px] flex flex-row justify-between items-center} 
         nav { 
             @apply font-barlow text-xs text-grey font-bold uppercase tracking-[0.92px] items-center gap-[33px] hidden md:flex}
         .hamburger {
@@ -104,7 +100,7 @@
         .linear {@apply  bg-[linear-gradient(to_bottom,_#b5b5b5_0.01%,_#FEFCF7)] bg-clip-text text-transparent}
 
         .card {
-            @apply bg-dark-cyan rounded-[8px] pt-[72px] pb-[51px] px-[12px] md:py-[41px] md:pl-[70px] md:pr-[48px] lg:px-[48px] lg:pt-[72px] lg:pb-[48px] flex items-center flex-col lg:flex-col md:flex-row space-y-[56px] md:space-y-[0px] md:space-x-[55px] lg:space-y-[56px]} 
+            @apply bg-dark-cyan rounded-[8px] pt-[72px] pb-[51px] px-[12px] md:py-[41px] md:pl-[70px] md:pr-[48px] lg:px-[48px] lg:pt-[72px] lg:pb-[48px] flex items-center flex-col lg:flex-col md:flex-row space-y-[56px] md:space-y-[0px] md:space-x-[55px] lg:space-y-[56px] lg:space-x-[0px]} 
         .card-content {
             @apply text-center md:text-left lg:text-center space-y-[24px] md:space-y-[16px] lg:space-y-[24px]}
 
@@ -117,17 +113,7 @@
             @apply inline-block w-[31px] h-[31px] bg-light-cream border-2 border-solid border-dark-cyan rounded-full relative z-1}
         .line {
             @apply w-[467px] h-[2px] bg-pale-orange absolute left-[20px] z-0}
-
-
-
-
-
-
-
-
-
-
-          
+    
                  
     </style>
 </head>
@@ -136,9 +122,9 @@
     <header class="headr">
         <img src="./assets/logo.svg" alt="Cofeeroaster" class="w-[163px] h-[18px] md:w-[235px] md:h-[26px]">
         <div class="space-y-[3px]">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
         </div>
         <nav>
             <a href="./index.html">home</a>
@@ -202,19 +188,20 @@
             </div>
         </section>
 
-        <section class="-space-y-[573px] md:-space-y-[298px] lg:-space-y-[231px]">
-            <div class="bg-Midnight rounded-[10px] text-light-cream h-[902px] md:h-[577px]">
-                 <div class="max-w-[279px] md:max-w-[540px] mx-auto text-center space-y-[24px] lg:space-y-[32px] pt-[64px] md:pt-[56px] lg:pt-[100px]">
-                <h2>Why choose us?</h2>
-                <p class="body">
-                    A large part of our role is buying great coffee as well as
-                    helping international buyers discover exceptional coffee from
-                    around the world. This means working closely with the best coffee
-                    growers to give you a more impactful experience on every level.
-                </p>
+        <section class="-space-y-[573px] md:-space-y-[298px] lg:-space-y-[231px] text-light-cream">
+            <div class="bg-Midnight rounded-[10px] h-[902px] md:h-[577px]">
+                <div
+                    class="max-w-[279px] md:max-w-[540px] mx-auto text-center space-y-[24px] lg:space-y-[32px] pt-[64px] md:pt-[56px] lg:pt-[100px]">
+                    <h2>Why choose us?</h2>
+                    <p class="body">
+                        A large part of our role is buying great coffee as well as
+                        helping international buyers discover exceptional coffee from
+                        around the world. This means working closely with the best coffee
+                        growers to give you a more impactful experience on every level.
+                    </p>
+                </div>
             </div>
-            </div>
-           <div class="grid lg:grid-cols-3 lg:gap-[30px] gap-[24px] text-light-cream px-[24px] md:px-[58px] lg:px-[85px]">
+            <div class="grid lg:grid-cols-3 lg:gap-[30px] gap-[24px] px-[24px] md:px-[58px] lg:px-[85px]">
                 <!-- card 1 -->
                 <div class="card">
                     <img src="./assets/coffee-bean.svg" alt="coffee-bean" class="w-[72px] h-[72px]">
@@ -300,9 +287,9 @@
         <div class="footer_content">
             <img src="assets/Group 5.png" alt="Cofeeroaster" class="w-[235px] h-[25px]">
             <nav class="footer_nav">
-                <a href="#home">home</a>
+                <a href="./index.html">home</a>
                 <a href="./about.html">about us</a>
-                <a href="#plan">Create your plan</a>
+                <a href="#plan">create your plan</a>
             </nav>
         </div>
 
