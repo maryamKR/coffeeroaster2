@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
         rel="stylesheet">
 
-        <style type="text/tailwindcss">
+    <style type="text/tailwindcss">
         @theme{
             /* colors  */
             --color-dark-cyan: #0E8784;
@@ -66,10 +66,6 @@
             @apply align-middle}
         button { 
             @apply bg-dark-cyan hover:bg-cyan disabled:bg-disabled text-white font-fraunces font-black text-lg py-[15px] px-[31px] rounded-md }       
-        .flex-between {
-            @apply flex flex-row justify-between items-center}
-        .flex-center {
-            @apply flex justify-center items-center}
         .overlay {
             @apply w-full h-full z-2 absolute bg-black opacity-50 rounded-[10px]}
         header {@apply pt-[32px] pb-[40px] md:py-[44px] px-[24px] md:px-[80px] flex flex-row justify-between items-center}
@@ -78,7 +74,7 @@
         .hamburger {
             @apply w-[16px] h-[3px] bg-dark-blue block md:hidden}
         main {
-            @apply px-[24px] md:px-[40px] lg:px-[80px] space-y-[120px] md:space-y-[144px] lg:space-y-[115px]
+            @apply px-[24px] md:px-[40px] lg:px-[80px] space-y-[120px] md:space-y-[144px] lg:space-y-[168px]
         }
         footer {
             @apply bg-Midnight flex flex-col lg:flex-row justify-between gap-y-[48px] md:gap-y-[65px] items-center py-[54px] lg:pt-[47px] lg:pb-[49px] lg:px-[85px] mx-[24px] md:mx-[40px] lg:mx-[80px] mt-[120px] md:mt-[144px] lg:mt-[115px] mb-[72px]
@@ -90,9 +86,6 @@
         }
 
 
-
-
-
         .hero_about {
             @apply bg-[url('./assets/Bitmap1.jpg')] relative bg-cover bg-center rounded-[10px] h-[450px] text-light-cream }
 
@@ -100,9 +93,16 @@
             @apply relative inline-block z-22 space-y-[24px] px-[24px] pt-[111px] text-center md:text-left md:pl-[58px] md:pt-[118px] lg:pl-[85px] lg:pt-[137px] }
 
 
+        .commitment {@apply flex justify-center items-center md:flex-row flex-col md:gap-x-[69px] lg:gap-x-[125px]  gap-y-[48px]}
+
+        .commitment_content {@apply max-w-[339px] lg:max-w-[540px] space-y-[32px] text-center md:text-left}
+
+        .qualitiy_background {@apply mt-[69px] md:mt-[160px] lg:mt-[88px] bg-Midnight h-[509px] md:h-[488px] lg:h-[474px] flex flex-col lg:flex-row gap-y-[64px] lg:gap-x-[125px] px-[24px] md:px-[58px] lg:px-[85px] rounded-[10px]}
+
+        .quality_content {@apply order-2 lg:order-1 max-w-[279px] md:max-w-[540px] text-center lg:text-left space-y-[24px] lg:space-y-[32px] lg:mt-[88px]}
 
 
-          
+        .headquarters {@apply space-y-[45px] flex flex-col items-center md:items-start}
                  
     </style>
 </head>
@@ -111,11 +111,11 @@
     <header>
         <img src="./assets/logo.svg" alt="Cofeeroaster" class="w-[235px] h-[26px]">
         <div class="space-y-[3px]">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
         </div>
-        <nav >
+        <nav>
             <a href="./index.html">home</a>
             <a href="./about.html">about us</a>
             <a href="#plan">create your plan</a>
@@ -127,15 +127,17 @@
             <div class="overlay"></div>
             <div class="heroAbout_content">
                 <h2>About Us</h2>
-                <p class="body max-w-[445px]">Coffeeroasters began its journey of exotic discovery in 1999,   highlighting
+                <p class="body max-w-[445px]">Coffeeroasters began its journey of exotic discovery in 1999, highlighting
                     stories of coffee from around the world. We have since been dedicated to bring the perfect cup -
                     from bean to brew - in every shipment.</p>
             </div>
         </section>
 
-        <section class="flex-center md:flex-row flex-col md:gap-x-[69px] lg:gap-x-[125px] gap-y-[48px]">
-            <div><img src="./assets/man.png" class="h-[520px] md:h-[470px] w-full md:w-[281px] lg:w-[445px] rounded-[10px]" alt="Our commitment"></div>
-            <div class="max-w-[339px] lg:max-w-[540px] space-y-[32px] text-center md:text-left">
+        <section class="commitment">
+            <div><img src="./assets/man.png"
+                    class="h-[520px] md:h-[470px] w-full md:w-[281px] lg:w-[445px] object-cover rounded-[10px]"
+                    alt="Our commitment"></div>
+            <div class="commitment_content">
                 <h2>Our commitment</h2>
                 <p class="body">We’re built on a simple mission and a commitment to doing good along the way. We want to
                     make it easy for you to discover and brew the world’s best coffee at home. It all starts at the
@@ -148,25 +150,27 @@
             </div>
         </section>
 
-        <section class="text-light-cream relative h-full">
-            <div class="mt-[88px] bg-Midnight h-[474px] flex gap-[125px] pl-[85px] rounded-[10px]">
-                <div class="max-w-[540px] space-y-[32px] mt-[88px] ">
+        <section class="flex flex-end text-light-cream h-[587px] md:h-[648px] lg:h-[562px]">
+            <div class="qualitiy_background">
+                <div class="quality_content">
                     <h2>Uncompromising quality</h2>
                     <p class="body">Although we work with growers who pay close attention to all stages of harvest and
                         processing, we employ, on our end, a rigorous quality control program to avoid over-roasting or
                         baking the coffee dry. Every bag of coffee is tagged with a roast date and batch number. Our
                         goal is to roast consistent, user-friendly coffee, so that brewing is easy and enjoyable.</p>
                 </div>
+
                 <img src="./assets/caffee.png"
-                    class="w-[445px] h-[474px] absolute top-[-88px] right-[85px] rounded-[10px]" alt="Uncompromising quality">
+                    class="order-1 lg:order-2 w-[279px] h-[156px] md:w-[573px] md:h-[320px] lg:w-[445px] lg:h-[474px] object-cover mt-[-69px] md:mt-[-160px] lg:mt-[-88px] rounded-[10px]"
+                    alt="Uncompromising quality">
             </div>
         </section>
 
-        <section class="max-w-[1045px] mx-auto space-y-[72px]">
+        <section class="max-w-[1045px] mx-auto space-y-[72px] md:text-left text-center">
             <h4 class="text-grey">Our headquarters</h4>
 
-            <div class="grid grid-cols-3 gap-[95px]">
-                <div class="space-y-[45px]">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-[80px] md:gap-[10px] lg:gap-[95px]">
+                <div class="headquarters">
                     <img src="./assets/1.svg" alt="UK">
                     <div class="space-y-[24px]">
                         <h3 class="text-dark-blue">United Kingdom</h3>
@@ -177,7 +181,7 @@
                     </div>
                 </div>
 
-                <div class="space-y-[45px]">
+                <div class="headquarters">
                     <img src="./assets/2.svg" alt="Canada">
                     <div class="space-y-[24px]">
                         <h3 class="text-dark-blue">Canada</h3>
@@ -188,7 +192,7 @@
                     </div>
                 </div>
 
-                <div class="space-y-[45px]">
+                <div class="headquarters">
                     <img src="./assets/3.svg" alt="Australia">
                     <div class="space-y-[24px]">
                         <h3 class="text-dark-blue">Australia</h3>
@@ -198,23 +202,22 @@
                             +44 1241 918425</p>
                     </div>
                 </div>
-
             </div>
         </section>
 
     </main>
 
-    <footer class="container mx-auto bg-Midnight h-[120px] flex-between  mt-[168px] px-[85px] mb-[88px]">
-        <div class="flex gap-[103px]">
+    <footer>
+        <div class="footer_content">
             <img src="assets/Group 5.png" alt="Cofeeroaster" class="w-[235px] h-[25px]">
-            <nav>
-                <a href="#home">home</a>
-                <a href="./about.html">about us</a>
-                <a href="#plan">Create your plan</a>
+            <nav class="footer_nav">
+            <a href="./index.html">home</a>
+            <a href="./about.html">about us</a>
+            <a href="#plan">create your plan</a>
             </nav>
-
         </div>
-        <div class="flex-between gap-[24px]">
+
+        <div class="flex gap-[24px]">
             <a href="www.facebook.com"><img src="assets/Path (2).svg" alt="Facebook"></a>
             <a href="www.instagram.com"><img src="assets/Shape.svg" alt="Instagram"></a>
             <a href="www.twitter"><img src="assets/Path.svg" alt="Twitter"></a>
