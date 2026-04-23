@@ -28,23 +28,23 @@
             --font-fraunces: "Fraunces", serif;
             /* text-size  */
             --text-8xl: 96px;
-            --text-8xl-line-height: 72px;
+            --text-8xl--line-height: 72px;
             --text-7xl: 40px;
-            --text-7xl-line-height: 40px;
+            --text-7xl--line-height: 40px;
             --text-4xl: 40px;
-            --text-4xl-line-height: 48px;
+            --text-4xl--line-height: 48px;
             --text-3xl: 32px;
-            --text-3xl-line-height: 36px;
+            --text-3xl--line-height: 36px;
             --text-2xl: 28px;
-            --text-2xl-line-height: 28px;
+            --text-2xl--line-height: 28px;
             --text-1xl: 24px;
-            --text-1xl-line-height: 32px;
+            --text-1xl--line-height: 32px;
             --text-lg-base: 16px;
-            --text-base-line-height: 26px;
+            --text-base--line-height: 26px;
             --text-base: 15px;
-            --text-base-line-height: 25px;
+            --text-base--line-height: 25px;
             --text-xs: 12px;
-            --text-xs-line-height: 15px;
+            --text-xs--line-height: 15px;
         } 
 
        
@@ -97,7 +97,7 @@
 
         .commitment_content {@apply max-w-[339px] lg:max-w-[540px] space-y-[32px] text-center md:text-left}
 
-        .qualitiy_background {@apply mt-[69px] md:mt-[160px] lg:mt-[88px] bg-Midnight h-[509px] md:h-[488px] lg:h-[474px] flex flex-col lg:flex-row gap-y-[64px] lg:gap-x-[125px] px-[24px] md:px-[58px] lg:px-[85px] rounded-[10px]}
+        .qualitiy_background {@apply mt-[69px] md:mt-[160px] lg:mt-[0] bg-Midnight border flex flex-col lg:flex-row -space-y-[614px]  px-[24px] md:px-[58px] lg:px-[85px] rounded-[10px]}
 
         .quality_content {@apply order-2 lg:order-1 max-w-[279px] md:max-w-[540px] text-center lg:text-left space-y-[24px] lg:space-y-[32px] lg:mt-[88px]}
 
@@ -150,7 +150,7 @@
             </div>
         </section>
 
-        <section class="flex flex-end text-light-cream h-[587px] md:h-[648px] lg:h-[562px]">
+        <section class="flex flex-end text-light-cream border-2 border-red-500 ">
             <div class="qualitiy_background">
                 <div class="quality_content">
                     <h2>Uncompromising quality</h2>
@@ -202,6 +202,12 @@
                             +44 1241 918425</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-black">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt qui reprehenderit dolorum animi, molestias ducimus nisi explicabo vel? Omnis vitae aspernatur nulla laudantium at fugit minus consequatur aperiam? Ipsam, officia?</p>
             </div>
         </section>
 
